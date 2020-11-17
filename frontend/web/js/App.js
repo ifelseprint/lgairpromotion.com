@@ -139,22 +139,29 @@
         	$('.file_result').html('ไฟล์ที่คุณได้เลือกอัพโหลด คือ "' + fileName +  '" .');
 		});
 
-		$.getJSON('js/area.json',function(data){
-			$('#ZIPCODE').select2({
-				data:data,
-				minimumInputLength:3,
-				language:'th',
-				placeholder: "พิมพ์รหัสไปรษณีย์",
-				templateSelection: zipSelTemplate,
-				templateResult: zipResTemplate,
-			}).on('select2:select', function (evt) {
-				var data=evt.params.data;
-				console.log(data);
-				$('#DISTRICT').val(data.d);
-				$('#AMPHUR').val(data.a);
-				$('#PROVINCE').val(data.p);
-			});
-	    });
+		$.getJSON('js/area.json').done(
+		    function( data ) {
+
+		        data = $.map(data, function(item) {
+		            return { id: item.text, d: item.d, a: item.a, p: item.p, text: item.text }; 
+		        });
+
+	        	$('#ZIPCODE').select2({
+					data:data,
+					minimumInputLength:3,
+					language:'th',
+					placeholder: "พิมพ์รหัสไปรษณีย์",
+					templateSelection: zipSelTemplate,
+					templateResult: zipResTemplate,
+				}).on('select2:select', function (evt) {
+					var data=evt.params.data;
+					$('#DISTRICT').val(data.d);
+					$('#AMPHUR').val(data.a);
+					$('#PROVINCE').val(data.p);
+				});
+		    }
+		);
+
 		$('.select2').select2({
             width: '100%'
         });
