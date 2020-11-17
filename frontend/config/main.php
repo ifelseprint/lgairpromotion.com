@@ -42,7 +42,9 @@ return [
         'errorHandler' => [
             'errorAction' => 'error/404',
         ],
-        
+        'CoreFunctions' => [
+            'class' => 'frontend\components\CoreFunctions'
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

@@ -21,7 +21,6 @@ class HomeController extends \yii\web\Controller
     public function actionRegister()
     {
 
-
     	$Register = new Register;
     	if(Yii::$app->request->isPost){
             $post = Yii::$app->request->post();
@@ -40,7 +39,19 @@ class HomeController extends \yii\web\Controller
 		        ->andWhere(['IS_STATUS' => '0'])
 		        ->one();
 
+		        $Register->APP_ID = Yii::$app->params['appID'];
 		        $Register->FULLNAME = $postFirstname." ".$postLastname;
+		        $Register->CREATED_DATETIME = new \yii\db\Expression('NOW()');
+		        $Register->CREATED_AT = 'user-event';
+
+		        // Tracking
+		        $getUTM = Yii::$app->CoreFunctions->getUTM();
+		        $Register->UTM_SOURCE = $getUTM->utm_source;
+		        $Register->UTM_MEDIUM = $getUTM->utm_medium;
+		        $Register->UTM_CAMPAIGN = $getUTM->utm_campaign;
+
+		        // IP Address
+		        $Register->IP = Yii::$app->CoreFunctions->getIP();
 
 		        if(!empty($SerialNumber)){
 
