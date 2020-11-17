@@ -172,6 +172,9 @@ $form = ActiveForm::begin([
     </div>
     <div class="row">
       <div class="col-sm-12" style="text-align: center;">
+        <?= $form->field($Register, 'UTM_SOURCE')->textInput(['type' => 'hidden','id'=>'UTM_SOURCE'])?>
+        <?= $form->field($Register, 'UTM_SOURCE')->textInput(['type' => 'hidden','id'=>'UTM_SOURCE'])?>
+        <?= $form->field($Register, 'UTM_SOURCE')->textInput(['type' => 'hidden','id'=>'UTM_SOURCE'])?>
         <?= Html::Button(Yii::t('app', '<i class="fa fa-floppy-o"></i> SUBMIT'), ['class' => 'btn btn-primary btn-sm submit-register']) ?>
       </div>
     </div>

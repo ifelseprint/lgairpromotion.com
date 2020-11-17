@@ -8,13 +8,18 @@ class HomeController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-    	$Register = new Register; 
+    	$getUTM = Yii::$app->CoreFunctions->getUTM();
+
+    	$Register = new Register;
+    	$Register->UTM_SOURCE = $getUTM->utm_source;
+        $Register->UTM_MEDIUM = $getUTM->utm_medium;
+        $Register->UTM_CAMPAIGN = $getUTM->utm_campaign;
         return $this->render('index', [
             'Register' => $Register,
             'dataSerialNumber' => ArrayHelper::map(\common\models\SerialNumber::find()
             ->where(['APP_ID' => Yii::$app->params['appID']])
             ->groupBy(['MODEL'])
-            ->all(), 'MODEL', 'MODEL'),
+            ->all(), 'MODEL', 'MODEL')
     	]);
     }
 
@@ -43,12 +48,6 @@ class HomeController extends \yii\web\Controller
 		        $Register->FULLNAME = $postFirstname." ".$postLastname;
 		        $Register->CREATED_DATETIME = new \yii\db\Expression('NOW()');
 		        $Register->CREATED_AT = 'user-event';
-
-		        // Tracking
-		        $getUTM = Yii::$app->CoreFunctions->getUTM();
-		        $Register->UTM_SOURCE = Yii::$app->session['utm_source'];
-		        $Register->UTM_MEDIUM = Yii::$app->session['utm_medium'];
-		        $Register->UTM_CAMPAIGN = Yii::$app->session['utm_campaign'];
 
 		        // IP Address
 		        $Register->IP = Yii::$app->CoreFunctions->getIP();
