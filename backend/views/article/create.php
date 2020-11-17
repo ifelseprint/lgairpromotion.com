@@ -1,0 +1,1 @@
+<?= $this->render('_form', ['Article' => $Article,'ArticleDetail' => $ArticleDetail]);?>

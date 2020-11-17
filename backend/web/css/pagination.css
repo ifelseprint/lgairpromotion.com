@@ -1,0 +1,32 @@
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.pagination a,.pagination span {
+    padding: .4rem .7rem;
+    line-height: 1.5;
+}
+.pagination li:first-child a,.pagination li:first-child span {
+    margin-left: 0;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+}
+.pagination a,.pagination span {
+    position: relative;
+    display: block;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #06002F;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.pagination li.active a {
+    z-index: 1;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #137F90;
+}
