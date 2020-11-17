@@ -45,10 +45,9 @@ class HomeController extends \yii\web\Controller
 		        $Register->CREATED_AT = 'user-event';
 
 		        // Tracking
-		        $getUTM = Yii::$app->CoreFunctions->getUTM();
-		        $Register->UTM_SOURCE = $getUTM->utm_source;
-		        $Register->UTM_MEDIUM = $getUTM->utm_medium;
-		        $Register->UTM_CAMPAIGN = $getUTM->utm_campaign;
+		        $Register->UTM_SOURCE = Yii::$app->session['utm_source'];
+		        $Register->UTM_MEDIUM = Yii::$app->session['utm_medium'];
+		        $Register->UTM_CAMPAIGN = Yii::$app->session['utm_campaign'];
 
 		        // IP Address
 		        $Register->IP = Yii::$app->CoreFunctions->getIP();
