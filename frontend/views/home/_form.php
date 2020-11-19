@@ -45,13 +45,13 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">ชื่อ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'FIRSTNAME')->textInput(['class' => 'form-control form-control-sm','id'=>'FIRSTNAME','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุชื่อ'])?>
+            <?= $form->field($Register, 'FIRSTNAME')->textInput(['class' => 'form-control form-control-sm','id'=>'FIRSTNAME','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุชื่อ',])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">นามสกุล<span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'LASTNAME')->textInput(['class' => 'form-control form-control-sm','id'=>'LASTNAME','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุนามสกุล'])?>
+            <?= $form->field($Register, 'LASTNAME')->textInput(['class' => 'form-control form-control-sm','id'=>'LASTNAME','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุนามสกุล'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
@@ -63,13 +63,13 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">เบอร์โทรศัพท์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'TEL')->textInput(['class' => 'form-control form-control-sm','id'=>'TEL','required'=> true,'onkeypress' =>'return appLG.App.OnlyNumbers(event)','pattern'=> '^0[0-9]{8,10}','maxlength' =>'10','errorMessage'=>'คุณยังไม่ได้ระบุเบอร์โทรศัพท์'])?>
+            <?= $form->field($Register, 'TEL')->textInput(['class' => 'form-control form-control-sm','id'=>'TEL','required'=> true,'onkeypress' =>'return appLG.App.OnlyNumbers(event)','pattern'=> '^0[0-9]{8,10}','maxlength' =>'10','data-msg'=>'คุณยังไม่ได้ระบุเบอร์โทรศัพท์'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">อีเมล <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'EMAIL')->textInput(['class' => 'form-control form-control-sm','id'=>'EMAIL','required'=> true,'pattern'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','errorMessage'=>'คุณยังไม่ได้ระบุอีเมล'])?>
+            <?= $form->field($Register, 'EMAIL')->textInput(['class' => 'form-control form-control-sm','id'=>'EMAIL','required'=> true,'pattern'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','data-msg'=>'คุณยังไม่ได้ระบุอีเมล'])?>
           </div>
         </div>
       </div>
@@ -78,31 +78,31 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">ที่อยู่ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'ADDRESS')->textInput(['class' => 'form-control form-control-sm','id'=>'ADDRESS','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุที่อยู่'])?>
+            <?= $form->field($Register, 'ADDRESS')->textInput(['class' => 'form-control form-control-sm','id'=>'ADDRESS','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุที่อยู่'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">รหัสไปรษณีย์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'ZIPCODE')->dropDownList([],['prompt'=>'พิมพ์รหัสไปรษณีย์','class'=>'form-control form-control-sm select2','id' => 'ZIPCODE','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุรหัสไปรษณีย์']); ?>
+            <?= $form->field($Register, 'ZIPCODE')->dropDownList([],['prompt'=>'พิมพ์รหัสไปรษณีย์','class'=>'form-control form-control-sm select2','id' => 'ZIPCODE','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุรหัสไปรษณีย์']); ?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">จังหวัด <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'PROVINCE')->textInput(['class' => 'form-control form-control-sm','id'=>'PROVINCE','readonly' => true,'required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุจังหวัด'])?>
+            <?= $form->field($Register, 'PROVINCE')->textInput(['class' => 'form-control form-control-sm','id'=>'PROVINCE','readonly' => true,'required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุจังหวัด'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">อำเภอ/เขต <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'AMPHUR')->textInput(['class' => 'form-control form-control-sm','id'=>'AMPHUR','readonly' => true,'required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุอำเภอ/เขต'])?>
+            <?= $form->field($Register, 'AMPHUR')->textInput(['class' => 'form-control form-control-sm','id'=>'AMPHUR','readonly' => true,'required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุอำเภอ/เขต'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">ตำบล/แขวง <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'DISTRICT')->textInput(['class' => 'form-control form-control-sm','id'=>'DISTRICT','readonly' => true,'required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุตำบล/แขวง'])?>
+            <?= $form->field($Register, 'DISTRICT')->textInput(['class' => 'form-control form-control-sm','id'=>'DISTRICT','readonly' => true,'required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุตำบล/แขวง'])?>
           </div>
         </div>
       </div>
@@ -113,20 +113,20 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">รุ่นผลิตภัณฑ์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'SELECT_1')->dropDownList($dataSerialNumber,['prompt'=>': : : กรุณาเลือก : : :','class'=>'form-control form-control-sm select2','id' => 'SELECT_1','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุรุ่นผลิตภัณฑ์']); ?>
+            <?= $form->field($Register, 'SELECT_1')->dropDownList($dataSerialNumber,['prompt'=>': : : กรุณาเลือก : : :','class'=>'form-control form-control-sm select2','id' => 'SELECT_1','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุรุ่นผลิตภัณฑ์']); ?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">หมายเลขซีเรียล <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'QUESTION_1')->textInput(['class' => 'form-control form-control-sm','id'=>'QUESTION_1','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุหมายเลขซีเรียล'])?>
+            <?= $form->field($Register, 'QUESTION_1')->textInput(['class' => 'form-control form-control-sm','id'=>'QUESTION_1','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุหมายเลขซีเรียล'])?>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">วันที่ต้องการรับบริการล้างแอร์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <div class="input-calendar">
-              <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','errorMessage'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
+              <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','data-msg'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
             </div>
             <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มีนาคม 2564 - 31 ธันวาคม 2564</span>
           </div>
@@ -137,7 +137,7 @@ $form = ActiveForm::begin([
             <label for="FILE_1" class="custom-file-upload">
                 <i class="fa fa-cloud-upload"></i> BROWSE
             </label>
-            <?= $form->field($Register, 'FILE_1')->fileInput(['class' => 'form-control form-control-sm','id'=>'FILE_1','required'=> true,'pattern' => '^.+\.(jpg|png|jpeg)$','errorMessage'=>'คุณยังไม่ได้ระบุไฟล์แนบใบเสร็จสินค้า'])?>
+            <?= $form->field($Register, 'FILE_1')->fileInput(['class' => 'form-control form-control-sm','id'=>'FILE_1','required'=> true,'pattern' => '^.+\.(jpg|png|jpeg)$','data-msg'=>'คุณยังไม่ได้ระบุไฟล์แนบใบเสร็จสินค้า'])?>
             <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> ใบเสร็จที่ลงทะเบียนต้องออกเป็นใบกำกับภาษีเท่านั้น</span>
             <div class="file_result" style=" font-size: 14px; color: #ababab;"></div>
           </div>
