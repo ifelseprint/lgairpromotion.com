@@ -49,8 +49,11 @@
                     errorElement: 'div',
 	                errorPlacement: function (error, element) {
 	                	error.addClass('invalid-feedback');
-	                    element.next().append(error);
-	                    // element.next().find('.error').html(element.attr('errorMessage'));
+	                    if(element.attr('type')=='checkbox'){
+                            element.parent().next().append(error);
+                        }else{
+                            element.next().append(error);
+                        }
 	                },
 	                highlight: function (element, errorClass, validClass) {
 	                    $(element).addClass('is-invalid');
@@ -69,11 +72,14 @@
 
             var form = $('#formRegister');
             form.validate({
-                errorElement: 'div',
+                errorElement: 'span',
                 errorPlacement: function (error, element) {
                 	error.addClass('invalid-feedback');
-                    element.next().append(error);
-                    // element.next().find('.error').html(element.attr('errorMessage'));
+                    if(element.attr('type')=='checkbox'){
+                        element.parent().next().append(error);
+                    }else{
+                        element.next().append(error);
+                    }
                 },
                 highlight: function (element, errorClass, validClass) {
                     $(element).addClass('is-invalid');

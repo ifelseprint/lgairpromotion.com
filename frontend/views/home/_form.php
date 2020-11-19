@@ -145,13 +145,13 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_2")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันได้อ่านนโยบายป้องกันข้อมูลโดยละเอียดแล้ว ตกลงยินยอมอนุญาตตามที่กำหนดไว้ในเงื่อนไขของขโยบายป้องกันข้อมูลทุกประกาศ <a href="'.Yii::$app->request->baseUrl.'/privacy-policy" style="text-decoration: underline;" target="_blank">อ่านนโยบายเพิ่มเติม</a>']); ?>
+            <?= $form->field($Register, "SELECT_2")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันได้อ่านนโยบายป้องกันข้อมูลโดยละเอียดแล้ว ตกลงยินยอมอนุญาตตามที่กำหนดไว้ในเงื่อนไขของขโยบายป้องกันข้อมูลทุกประกาศ <a href="'.Yii::$app->request->baseUrl.'/privacy-policy" style="text-decoration: underline;" target="_blank">อ่านนโยบายเพิ่มเติม</a>','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเล็กทรอนิกส์']); ?>
+            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเล็กทรอนิกส์','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
       </div>
