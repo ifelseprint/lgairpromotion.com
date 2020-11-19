@@ -69,7 +69,7 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">อีเมล <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'EMAIL')->textInput(['class' => 'form-control form-control-sm','id'=>'EMAIL','required'=> true,'pattern'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','data-msg'=>'คุณยังไม่ได้ระบุอีเมล'])?>
+            <?= $form->field($Register, 'EMAIL')->textInput(['class' => 'form-control form-control-sm','id'=>'EMAIL','required'=> true,'pattern'=>'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','data-msg'=>'ข้อมูลอีเมลไม่ถูกต้อง และห้ามเป็นค่าว่าง'])?>
           </div>
         </div>
       </div>
