@@ -137,7 +137,7 @@ $form = ActiveForm::begin([
             <label for="FILE_1" class="custom-file-upload">
                 <i class="fa fa-cloud-upload"></i> BROWSE
             </label>
-            <?= $form->field($Register, 'FILE_1')->fileInput(['class' => 'form-control form-control-sm','id'=>'FILE_1','required'=> true,'pattern' => '^.+\.(jpg|png|jpeg)$','data-msg'=>'คุณยังไม่ได้ระบุไฟล์แนบใบเสร็จสินค้า'])?>
+            <?= $form->field($Register, 'FILE_1')->fileInput(['class' => 'form-control form-control-sm','id'=>'FILE_1','required'=> true,'pattern' => '^.+\.(jpg|png|jpeg)$','data-msg'=>'คุณยังไม่ได้ระบุไฟล์แนบใบเสร็จสินค้า หรือนามสกุลไฟล์ไม่ถูกต้อง jpg,png,jpeg'])?>
             <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> ใบเสร็จที่ลงทะเบียนต้องออกเป็นใบกำกับภาษีเท่านั้น</span>
             <div class="file_result" style=" font-size: 14px; color: #ababab;"></div>
           </div>
