@@ -123,24 +123,10 @@ $form = ActiveForm::begin([
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">ร้านค้าที่ซื้อ <span class="field_required">*</span> :</label>
-          <div class="col-sm-9">
-            <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm','id'=>'QUESTION_2','required'=> true,'errorMessage'=>'คุณยังไม่ได้ระบุร้านค้าที่ซื้อ'])?>
-          </div>
-        </div>
-        <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">วันที่ซื้อสินค้า <span class="field_required">*</span> :</label>
-          <div class="col-sm-9">
-            <div class="input-calendar">
-              <?= $form->field($Register, 'QUESTION_3')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_3','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','errorMessage'=>'คุณยังไม่ได้ระบุวันที่ซื้อสินค้า'])?>
-            </div>
-          </div>
-        </div>
-        <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">วันที่ต้องการรับบริการล้างแอร์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <div class="input-calendar">
-              <?= $form->field($Register, 'QUESTION_4')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_4','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','errorMessage'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
+              <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','errorMessage'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
             </div>
             <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มีนาคม 2564 - 31 ธันวาคม 2564</span>
           </div>
