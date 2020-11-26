@@ -35,7 +35,7 @@ $form = ActiveForm::begin([
     <div class="row" style="margin-bottom: 40px;">
       <div class="col-sm-12">
           <div style="text-align: center;">
-            <h2 style="margin:0px;"><span style="padding: 10px 30px; background: #c13442; color: #fff;">ลงทะเบียนเพื่อรับสิทธิที่นี่</span></h2>
+            <h2 style="margin:0px;"><span style="padding: 10px 30px; background: #c13442; color: #fff;">ลงทะเบียนเพื่อรับสิทธิ์ที่นี่</span></h2>
           </div>
       </div>
     </div>

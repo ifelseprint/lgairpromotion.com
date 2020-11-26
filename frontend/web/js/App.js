@@ -72,9 +72,9 @@
 
             var form = $('#formRegister');
             form.validate({
-                errorElement: 'span',
+                errorElement: 'div',
                 errorPlacement: function (error, element) {
-                	error.addClass('invalid-feedback');
+                    error.addClass('invalid-feedback');
                     if(element.attr('type')=='checkbox'){
                         element.parent().next().append(error);
                     }else{
@@ -178,6 +178,8 @@
 		$('.datepicker').daterangepicker({
             singleDatePicker: true,
             autoUpdateInput: false,
+            minDate: '01/03/2021',
+            maxDate: '31/12/2021',
             locale: {
                 "format": "DD/MM/YYYY"
             },
