@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use frontend\assets\AppAsset;
-use frontend\assets\LawAsset;
+use frontend\assets\CleanandcoolAsset;
 AppAsset::register($this);
 ?>
 <div class="page-wrapper">
@@ -49,5 +49,5 @@ AppAsset::register($this);
 
 </div>
 <?php
-LawAsset::register($this);
+CleanandcoolAsset::register($this);
 ?>

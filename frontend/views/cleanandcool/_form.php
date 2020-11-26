@@ -1,23 +1,12 @@
 <?php
-use yii\base\Widget;
-use yii\grid\GridView;
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
-use yii\widgets\Pjax;
 ?>
-<!-- Main content -->
-<?php Pjax::begin(['id' => 'pjax-grid','timeout' => 0,'enablePushState' => false]); ?>
-<div id="loadingOverlay" class="loader-overlay" style="display: none;">
-    <div class="loader-content loader-center">
-        <div id="loading" class="loader"></div>
-    </div>
-</div>
 <?php
 $action = Yii::$app->controller->action->id;
 
 $form = ActiveForm::begin([
-    'action' => ['home/register'],
+    'action' => ['cleanandcool/register'],
     'method' => 'post',
     'options' => ['id' => 'formRegister', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ],
     'enableClientValidation' => true,
@@ -168,14 +157,3 @@ $form = ActiveForm::begin([
 </div>
 <!-- /.content -->
 <?php ActiveForm::end(); ?>
-<?php
-
-$script = <<<JS
-$("document").ready(function(){
-  appLG.App.initializeInPjax();
-});
-JS;
-$this->registerJs($script,\yii\web\View::POS_READY);
-?>
-
-<?php Pjax::end(); ?>

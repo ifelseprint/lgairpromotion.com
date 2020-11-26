@@ -4,10 +4,11 @@ use yii;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
 use frontend\models\Register;
-class HomeController extends \yii\web\Controller
+class CleanandcoolController extends \yii\web\Controller
 {
     public function actionIndex()
     {
+        $this->layout = 'cleanandcool/main';
     	$getUTM = Yii::$app->CoreFunctions->getUTM();
 
     	$Register = new Register;
@@ -55,7 +56,7 @@ class HomeController extends \yii\web\Controller
 		        if(!empty($SerialNumber)){
 
 		        	$folder_name = date('Ym');
-		        	$folder_upload = Yii::getAlias('@frontend').'/web/uploads';
+		        	$folder_upload = Yii::getAlias('@frontend').'/web/uploads/cleanandcool';
 			    	$folder = $folder_upload."/".$folder_name;
 			        if (!is_dir($folder)) {
 			            mkdir($folder);
@@ -77,7 +78,7 @@ class HomeController extends \yii\web\Controller
 
 	                    return json_encode([
 	                        "status" => true,
-	                        "response" => "ทางเราได้รับข้อมูลของท่านเรียบร้อยแล้ว<br/>We have received your information successfully."
+	                        "response" => '<div class="text-center"><h5><b>ท่านได้ทำการลงทะเบียนผู้ใช้และรับสิทธิ์เรียบร้อยแล้ว</b></h5>เจ้าหน้าที่จะทำการติดต่อกลับเพื่อยืนยันสิทธิ์<br/>และนัดหมายให้บริการอีกครั้ง หลังจากสิ้นสุดระยะเวลาการลงทะเบียน</div>'
 	                    ]);
 	                }else{
 	                    return json_encode([
@@ -88,7 +89,7 @@ class HomeController extends \yii\web\Controller
 	            }else{
 	            	return json_encode([
                         "status" => false,
-                        "response" => '<div class="invalid">หมายเลขซีเรียลไม่ถูกต้องหรือถูกใช้ไปแล้ว<br/>The serial number is invalid or used.</div>'
+                        "response" => '<div class="text-center" style="color: #f00;"><h5><b>ลงทะเบียนไม่สำเร็จ</b></h5>หมายเลขซีเรียลไม่ถูกต้องหรือถูกใช้ไปแล้ว</div>'
                     ]);
 	            }
            	}else{
@@ -99,5 +100,14 @@ class HomeController extends \yii\web\Controller
            	}
         }
     }
-
+    public function actionLaw()
+    {
+        $this->layout = 'cleanandcool/inside';
+    	return $this->render('law');
+    }
+    public function actionPrivacyPolicy()
+    {
+        $this->layout = 'cleanandcool/inside';
+    	return $this->render('privacy-policy');
+    }
 }
