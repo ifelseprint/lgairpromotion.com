@@ -4,7 +4,7 @@ use yii\helpers\Url;
 // use frontend\assets\HomeAsset;
 // HomeAsset::register($this);
 ?>
-<div class='banner'>
+<div class='banner' style="cursor: pointer;">
   <img src="<?php echo Yii::$app->request->baseUrl; ?>/img/banner.png" width="100%">
 </div>
   
