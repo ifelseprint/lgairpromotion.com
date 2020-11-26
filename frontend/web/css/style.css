@@ -128,6 +128,11 @@ input[type="file"] {
     font-size: 20px;
     letter-spacing: 2px;
 }
+.btn-primary:hover {
+    color: #000;
+    background-color: #ccc;
+    border-color: #ccc;
+}
 /* custom-modal */
 /* The Modal (background) */
 .custom-modal {

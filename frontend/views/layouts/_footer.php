@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center">
-                <a href="<?php echo Yii::$app->request->baseUrl; ?>/privacy-policy">นโยบายความเป็นส่วนตัว</a> | 
-                <a href="<?php echo Yii::$app->request->baseUrl; ?>/law">กฎหมาย</a>
+                <a href="<?php echo Yii::$app->request->baseUrl; ?>/privacy-policy" style="color: #c13442;">นโยบายความเป็นส่วนตัว</a> | 
+                <a href="<?php echo Yii::$app->request->baseUrl; ?>/law" style="color: #c13442;">กฎหมาย</a>
             </div>
         </div>
     </div>
