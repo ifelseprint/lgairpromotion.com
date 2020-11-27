@@ -4,11 +4,11 @@ use yii;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
 use frontend\models\Register;
-class CleanandcoolController extends \yii\web\Controller
+class CleanandcoolpromotionController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $this->layout = 'cleanandcool/main';
+        $this->layout = 'cleanandcoolpromotion/main';
     	$getUTM = Yii::$app->CoreFunctions->getUTM();
 
     	$Register = new Register;
@@ -45,7 +45,7 @@ class CleanandcoolController extends \yii\web\Controller
 		        ->andWhere(['IS_STATUS' => '0'])
 		        ->one();
 
-		        $Register->APP_ID = Yii::$app->params['appID'];
+		        $Register->APP_ID = '1';
 		        $Register->FULLNAME = $postFirstname." ".$postLastname;
 		        $Register->CREATED_DATETIME = new \yii\db\Expression('NOW()');
 		        $Register->CREATED_AT = 'user-event';
@@ -56,7 +56,7 @@ class CleanandcoolController extends \yii\web\Controller
 		        if(!empty($SerialNumber)){
 
 		        	$folder_name = date('Ym');
-		        	$folder_upload = Yii::getAlias('@frontend').'/web/uploads/cleanandcool';
+		        	$folder_upload = Yii::getAlias('@frontend').'/web/uploads/cleanandcoolpromotion';
 			    	$folder = $folder_upload."/".$folder_name;
 			        if (!is_dir($folder)) {
 			            mkdir($folder);
@@ -102,12 +102,12 @@ class CleanandcoolController extends \yii\web\Controller
     }
     public function actionLaw()
     {
-        $this->layout = 'cleanandcool/inside';
+        $this->layout = 'cleanandcoolpromotion/inside';
     	return $this->render('law');
     }
     public function actionPrivacyPolicy()
     {
-        $this->layout = 'cleanandcool/inside';
+        $this->layout = 'cleanandcoolpromotion/inside';
     	return $this->render('privacy-policy');
     }
 }

@@ -1,14 +1,14 @@
 (function(namespace, $) {
     "use strict";
 
-    var Cleanandcool = function () {
+    var Cleanandcoolpromotion = function () {
         var o = this; // Create reference to this instance
         $(document).ready(function () {
             o.initialize();
         }); // Initialize app when document is ready
 
     };
-    var p = Cleanandcool.prototype;
+    var p = Cleanandcoolpromotion.prototype;
 
     // =========================================================================
     // INIT
@@ -122,5 +122,5 @@
     // =========================================================================
     // DEFINE NAMESPACE
     // =========================================================================
-    namespace.Cleanandcool = new Cleanandcool;
+    namespace.Cleanandcoolpromotion = new Cleanandcoolpromotion;
 }(this.appLG, jQuery)); // pass in (namespace, jQuery):

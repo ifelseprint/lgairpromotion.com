@@ -4,7 +4,7 @@ use yii\widgets\Pjax;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use frontend\assets\AppAsset;
-use frontend\assets\CleanandcoolAsset;
+use frontend\assets\CleanandcoolpromotionAsset;
 AppAsset::register($this);
 ?>
 <?php Pjax::begin(['id' => 'pjax-grid','timeout' => 0,'enablePushState' => false,]); ?>
@@ -15,7 +15,7 @@ AppAsset::register($this);
 </div>
 
 <div class='banner' style="cursor: pointer;">
-  <img src="<?php echo Yii::$app->request->baseUrl; ?>/img/cleanandcool/banner.png" width="100%">
+  <img src="<?php echo Yii::$app->request->baseUrl; ?>/img/cleanandcoolpromotion/banner.png" width="100%">
 </div>
   
 <?= $this->render('_form', ['Register'=> $Register,'dataSerialNumber'=>$dataSerialNumber]); ?>
@@ -36,11 +36,11 @@ $script = <<<JS
     });
 
     appLG.App.initializeInPjax();
-    appLG.Cleanandcool.initializeInPjax();
+    appLG.Cleanandcoolpromotion.initializeInPjax();
   });
 JS;
 $this->registerJs($script);
-CleanandcoolAsset::register($this);
+CleanandcoolpromotionAsset::register($this);
 ?>
 <?php Pjax::end(); ?>
 

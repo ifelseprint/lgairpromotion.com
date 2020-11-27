@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use frontend\assets\AppAsset;
-use frontend\assets\CleanandcoolAsset;
+use frontend\assets\CleanandcoolpromotionAsset;
 AppAsset::register($this);
 ?>
 <div class="page-wrapper">
@@ -141,5 +141,5 @@ AppAsset::register($this);
 
 </div>
 <?php
-CleanandcoolAsset::register($this);
+CleanandcoolpromotionAsset::register($this);
 ?>
