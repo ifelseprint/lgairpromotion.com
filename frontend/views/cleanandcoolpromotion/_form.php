@@ -140,7 +140,7 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเล็กทรอนิคส์','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
+            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเล็คทรอนิคส์','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
       </div>
