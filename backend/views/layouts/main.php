@@ -19,7 +19,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav pace-red">
 <?php $this->beginBody() ?>
 
 <div class="wrapper">
@@ -27,7 +27,7 @@ AppAsset::register($this);
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
       <a href="<?=Url::base(true);?>/dashboard" class="navbar-brand">
-        <img src="<?=Url::base(true);?>/img/logo.png" alt="" class="brand-image">
+        <img src="<?=Url::base(true);?>/img/logo.png" alt="" style="width: 100px;">
       </a>
       
       <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,52 +39,7 @@ AppAsset::register($this);
         <ul class="navbar-nav">
           <li class="nav-item <?php echo (Yii::$app->controller->id=="dashboard" ? 'active' : '' )?>">
             <a href="<?=Url::base(true);?>/dashboard" class="nav-link"><i class="ti-home"></i> Dashboard</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="ti-clipboard"></i> Content Management</a>
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow-sm">
-              <li class="<?php echo (Yii::$app->controller->id=="banner" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/banner" class="nav-link">Banner / แบนเนอร์</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="product" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/product" class="nav-link">Product / สินค้า</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="article" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/article" class="nav-link">Article / บทความ</a>
-              </li>      
-              <li class="<?php echo (Yii::$app->controller->id=="service" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/service" class="nav-link">Service / บริการ</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="jobs" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/jobs" class="nav-link">Jobs / สมัครงาน</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="promotion" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/promotion" class="nav-link">Promotion / โปรโมชั่น</a>
-              </li>        
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="ti-view-list-alt"></i> Data Result</a>
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow-sm">
-              <li class="<?php echo (Yii::$app->controller->id=="contact-form" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/contact-form" class="nav-link">Contact / ติดต่อเรา</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="jobs-form" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/jobs-form" class="nav-link">Jobs / สมัครงาน</a>
-              </li>       
-            </ul>
           </li>   
-          <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="ti-settings"></i> Setting</a>
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow-sm">
-              <li class="<?php echo (Yii::$app->controller->id=="pages" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/pages" class="nav-link">หน้า / Pages</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="translate" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/translate" class="nav-link">แปลงภาษา / Translate</a>
-              </li>       
-            </ul>
-          </li>    
         </ul>
 
       </div>
@@ -134,7 +89,7 @@ AppAsset::register($this);
               <i class="fas fa-plug"></i> System<small> version 1.0</small> 
             </div>
             <!-- Default to the left -->
-            Copyright &copy; <script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.wehomemart.com" target="_blank">SC HOME MART</a>. All rights reserved.
+            Copyright &copy; <script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.lgairpromotion.com" target="_blank">LG Air Promotion</a>. All rights reserved.
         </div>
     </footer>
 </div>

@@ -19,7 +19,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav pace-red">
 <?php $this->beginBody() ?>
 
     <?= $content ?>
@@ -32,7 +32,7 @@ AppAsset::register($this);
               <i class="fas fa-plug"></i> System<small> version 1.0</small> 
             </div>
             <!-- Default to the left -->
-            Copyright &copy; <script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.wehomemart.com" target="_blank">SC HOME MART</a>. All rights reserved.
+            Copyright &copy; <script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.lgairpromotion.com" target="_blank">LG Air Promotion</a>. All rights reserved.
         </div>
     </footer>
 </div>

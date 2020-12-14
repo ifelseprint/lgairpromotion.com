@@ -37,6 +37,7 @@ class CleanandcoolpromotionController extends \yii\web\Controller
             	$postLastname = $post['Register']['LASTNAME'];
             	$postModel = $post['Register']['SELECT_1'];
             	$postSerialNumber = $post['Register']['QUESTION_1'];
+                $postDateService = date('Y-m-d', strtotime(str_replace('/', '-', $post['Register']['QUESTION_2'])));
 
             	$SerialNumber = \common\models\SerialNumber::find()
 		        ->where(['APP_ID'=> Yii::$app->params['appID']])
@@ -70,6 +71,7 @@ class CleanandcoolpromotionController extends \yii\web\Controller
 					$Register->FILE_1->saveAs($PATH_FILE_1);
 					$Register->FILE_1 = $FILE_1;
 					$Register->PATH_FILE_1 = $path_folder;
+                    $Register->QUESTION_2 = $postDateService;
 
 	            	if ($Register->save()) {
 

@@ -1,1 +1,0 @@
-<?= $this->render('_form', ['data' => null,'Product' => $Product,'ProductDetail' => $ProductDetail]);?>

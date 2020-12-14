@@ -10,3 +10,6 @@ RewriteRule ^(.+)?$ frontend/web/$1
 
 RewriteCond %{REQUEST_URI} ^/(deploy)
 RewriteRule ^.*$ deploy.php [L]
+
+RewriteCond %{REQUEST_URI} ^/(uploads)
+RewriteRule ^uploads/(.*)$ frontend/web/uploads/$1 [L]

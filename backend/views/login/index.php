@@ -35,10 +35,10 @@ use yii\bootstrap\ActiveForm;
     </div>
   </div>
 </div>
+
 <?php
 $script = <<<JS
   $("document").ready(function(){
-
     $("#pjax-grid").on("pjax:start", function() {
       $('#loadingOverlay').show();
     });

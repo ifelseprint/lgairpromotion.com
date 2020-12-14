@@ -29,6 +29,8 @@ class LoginController extends Controller
         // $user->login_password =  $user->setPassword('1234');
         // $user->is_active = 1;
         // $user->setPassword('1234');
+        // print_r($user->login_password);
+        // exit;
         // $user->generateAuthKey();
         // $user->generateEmailVerificationToken();
         // $user->save();
@@ -41,8 +43,8 @@ class LoginController extends Controller
 
         $LoginForm = new LoginForm();
         if ($LoginForm->load(Yii::$app->request->post()) && $LoginForm->login()) {
-            Yii::$app->response->redirect(['dashboard/index']);
-            // return $this->goBack();
+            // Yii::$app->response->redirect(['dashboard/index']);
+            return $this->goBack();
         } else {
             $LoginForm->login_password = '';
 

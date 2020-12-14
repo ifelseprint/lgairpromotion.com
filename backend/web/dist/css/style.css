@@ -211,7 +211,11 @@ a {
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: #ffffff;
-    background: #17a2b8;
+    background: #cd3751;
+}
+.bg-info {
+    background-color: #cd3751 !important;
+    color: #fff !important;
 }
 .main-header .nav-link:hover {
 	background:#F1F9FA;

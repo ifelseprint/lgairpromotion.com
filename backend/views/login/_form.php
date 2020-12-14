@@ -14,6 +14,7 @@ $this->title = 'Login';
   'method' => 'post',
   'id' => 'form-login',
   'action' => ['login/index'],
+  'enableClientValidation' => true,
   'options' => ['enctype' => 'multipart/form-data','data-pjax' => true],
   'fieldConfig' => [
     'template' => "{input} <div style='position: fixed;margin-top: 37px;color: #f00;'>{error}</div>",

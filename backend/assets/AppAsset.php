@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
         'dist/icon/material-design/css/material-design-iconic-font.min.css',
         'plugins/select2/css/select2.min.css',
         'plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
+        'plugins/pace-progress/themes/black/pace-theme-flat-top.css',
         'plugins/daterangepicker/daterangepicker.css',
         'dist/css/style.css',
         'css/loader.css',
@@ -31,6 +32,9 @@ class AppAsset extends AssetBundle
         'plugins/tinymce/tinymce.min.js',
         'plugins/select2/js/select2.full.min.js',
         'plugins/daterangepicker/daterangepicker.js',
+        'plugins/jquery-validation/jquery.validate.js',
+        'plugins/jquery-validation/additional-methods.min.js',
+        'plugins/pace-progress/pace.min.js',
         'dist/js/adminlte.min.js',
         'js/App.js',
     ];

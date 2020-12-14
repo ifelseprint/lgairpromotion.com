@@ -48,14 +48,12 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                // '' => 'dashboard/index',
-                'contact-form/view/<id:\d+>' => 'contact-form/view',
-                'jobs-form/view/<id:\d+>' => 'jobs-form/view',
-                
-                '<controller:\w+>/' => '<controller>/index',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                ''                                                        => 'dashboard/index',
+                // Default
+                '<controller:[\w\-]+>'                                    => '<controller>/index',
+                '<controller:[\w\-]+>/<id:\d+>'                           => '<controller>/view',
+                '<controller:[\w\-]+>/<action:[\w\-]+>/<id>'              => '<controller>/<action>',
+                '<controller:[\w\-]+>/<action:[\w\-]+>'                   => '<controller>/<action>',
             ],
         ],
         
