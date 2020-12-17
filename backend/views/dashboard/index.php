@@ -163,7 +163,7 @@ $script = <<<JS
           "firstDay": 1
       },
       maxDate: new Date(),
-      drops: "up",
+      drops: "down",
       showDropdowns: true,
     },function(start, end, label) {
         console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
