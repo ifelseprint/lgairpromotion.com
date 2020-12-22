@@ -111,15 +111,15 @@ $form = ActiveForm::begin([
             <?= $form->field($Register, 'QUESTION_1')->textInput(['class' => 'form-control form-control-sm','id'=>'QUESTION_1','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุหมายเลขซีเรียล'])?>
           </div>
         </div>
-        <div class="form-group-sm row" style="margin-bottom: 10px;">
+        <!-- <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">วันที่ต้องการรับบริการล้างแอร์ <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <div class="input-calendar">
               <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','data-msg'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
             </div>
-            <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มีนาคม 2564 - 31 ธันวาคม 2564</span>
+            <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มกราคม 2564 - 28 กุมภาพันธ์ 2564</span>
           </div>
-        </div>
+        </div> -->
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">แนบใบเสร็จสินค้า <span class="field_required">*</span> :</label>
           <div class="col-sm-9">

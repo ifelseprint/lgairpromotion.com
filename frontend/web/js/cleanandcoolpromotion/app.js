@@ -31,7 +31,26 @@
         //  e.preventDefault();
         //  $('.popup-sendForm').css('display','block');
         // });
-        // 
+        $('.datepicker').daterangepicker({
+            singleDatePicker: true,
+            autoUpdateInput: false,
+            minDate: '01/03/2021',
+            maxDate: '31/12/2021',
+            locale: {
+                "format": "DD/MM/YYYY"
+            },
+            drops: "up",
+            showDropdowns: true,
+        });
+        $('.datepicker').on('apply.daterangepicker', function(ev, picker) {
+
+            var date_select = picker.startDate.format('DD/MM/YYYY');
+            $(this).val(date_select);
+            
+        });
+        $('.datepicker').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
 
         $(".banner").click(function(e) {
             e.preventDefault();
