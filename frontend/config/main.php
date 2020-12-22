@@ -49,8 +49,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'home/index',
-
+                ''                                           => 'home/index',
+                'law'                                        => 'home/law',
+                'privacy-policy'                             => 'home/privacy-policy',
                 // Default
                 '<controller:[\w\-]+>'                       => '<controller>/index',
                 '<controller:[\w\-]+>/<id:\d+>'              => '<controller>/view',

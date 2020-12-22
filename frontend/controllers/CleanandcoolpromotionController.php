@@ -102,14 +102,4 @@ class CleanandcoolpromotionController extends \yii\web\Controller
            	}
         }
     }
-    public function actionLaw()
-    {
-        $this->layout = 'cleanandcoolpromotion/inside';
-    	return $this->render('law');
-    }
-    public function actionPrivacyPolicy()
-    {
-        $this->layout = 'cleanandcoolpromotion/inside';
-    	return $this->render('privacy-policy');
-    }
 }
