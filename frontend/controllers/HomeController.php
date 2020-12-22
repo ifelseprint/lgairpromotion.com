@@ -7,6 +7,18 @@ class HomeController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->redirect(['cleanandcoolpromotion/index']);
+    	$this->layout = 'main';
+        return $this->render('index');
+    }
+
+    public function actionLaw()
+    {
+        $this->layout = 'main';
+    	return $this->render('law');
+    }
+    public function actionPrivacyPolicy()
+    {
+        $this->layout = 'main';
+    	return $this->render('privacy-policy');
     }
 }
