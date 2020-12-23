@@ -94,7 +94,7 @@ AppAsset::register($this);
             'format' => 'raw',
             'contentOptions' => ['style' => 'width:200px'],
             'value' => function ($model) {
-              return '<div class="btn-modal-view" value='.Url::to(['dashboard/view/'.base64_encode($model->ID)]).' style="height: 25px;overflow:hidden;">'.$model->TEL.'</div>';
+              return '<div class="btn-modal-view" value='.Url::to(['dashboard/view/'.base64_encode($model->ID)]).' style="height: 25px;overflow:hidden;">'.$model->EMAIL.'</div>';
             },
           ],
           [
