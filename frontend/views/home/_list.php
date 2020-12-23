@@ -30,7 +30,7 @@
 				<div class="homepage-list homepage-list-header">Tiew Tua Thai with LG PuriCare Mini</div>
 				<div class="homepage-list homepage-list-detail">
 					<div>เมื่อซื้อเครื่องฟอกอากาศรุ่น PuriCare Mini รับฟรีกระเป๋าเดินทาง Mini Luggage จำนวน 1 ใบ ฟรี</div>
-					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 21 ธันวาคม 2563 – 28 กุมภาพันธ์ 2564</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 1 มกราคม 2564 – 28 กุมภาพันธ์ 2564</div>
 				</div>
 				<div class="homepage-list homepage-list-button">
 					<a href="<?php echo Yii::$app->request->baseUrl; ?>/tiewtuathaipuricaremini">ดูเพิ่มเติม</a>
