@@ -10,21 +10,6 @@
 		<div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
-					<img width="100%" src="<?php echo Yii::$app->request->baseUrl; ?>/img/homepage_1.jpg">
-				</div>
-				<div class="homepage-list homepage-list-header">Clean & Cool DualCool DualCare</div>
-				<div class="homepage-list homepage-list-detail">
-					<div>เพียงซื้อเครื่องปรับอากาศ PuriCool Series ทุก BTU ฟรีบริการล้างเครื่องปรับอากาศพร้อมพ่นน้ำยาฆ่าเชื้อ Covid-19 และแผ่นฟิลเตอร์กรองฝุ่น PM1.0</div>
-					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 5 ธันวาคม 2563 – 20 กุมภาพันธ์ 2564</div>
-				</div>
-				<div class="homepage-list homepage-list-button">
-					<a href="<?php echo Yii::$app->request->baseUrl; ?>/cleanandcoolpromotion">ดูเพิ่มเติม</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="col-md-12" style="padding: 10px 25px;">
-				<div class="homepage-list homepage-list-img">
 					<img width="100%" src="<?php echo Yii::$app->request->baseUrl; ?>/img/homepage_2.jpg" >
 				</div>
 				<div class="homepage-list homepage-list-header">Tiew Tua Thai with LG PuriCare Mini</div>
@@ -37,6 +22,22 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-3">
+			<div class="col-md-12" style="padding: 10px 25px;">
+				<div class="homepage-list homepage-list-img">
+					<img width="100%" src="<?php echo Yii::$app->request->baseUrl; ?>/img/homepage_1.jpg">
+				</div>
+				<div class="homepage-list homepage-list-header">Clean & Cool DualCool DualCare</div>
+				<div class="homepage-list homepage-list-detail">
+					<div>เพียงซื้อเครื่องปรับอากาศ PuriCool Series ทุก BTU ฟรีบริการล้างเครื่องปรับอากาศพร้อมพ่นน้ำยาฆ่าเชื้อ Covid-19 และแผ่นฟิลเตอร์กรองฝุ่น PM1.0</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 5 ธันวาคม 2563 – 20 กุมภาพันธ์ 2564</div>
+				</div>
+				<div class="homepage-list homepage-list-button">
+					<a href="<?php echo Yii::$app->request->baseUrl; ?>/cleanandcoolpromotion">ดูเพิ่มเติม</a>
+				</div>
+			</div>
+		</div>
+		
 		<!-- <div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
