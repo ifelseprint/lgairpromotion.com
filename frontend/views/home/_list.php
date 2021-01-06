@@ -7,7 +7,7 @@
 		</div>
 	</div>
 	<div class="row d-flex justify-content-center">
-		<div class="col-md-3">
+		<!-- <div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<img width="100%" src="<?php echo Yii::$app->request->baseUrl; ?>/img/homepage_2.jpg" >
@@ -21,7 +21,7 @@
 					<a href="<?php echo Yii::$app->request->baseUrl; ?>/tiewtuathaipuricaremini">ดูเพิ่มเติม</a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">

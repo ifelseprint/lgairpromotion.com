@@ -8,6 +8,8 @@ class TiewtuathaipuricareminiController extends \yii\web\Controller
 {
     public function actionIndex()
     {
+    	echo "Campaign inactive.";
+    	exit;
         $this->layout = 'tiewtuathaipuricaremini/main';
     	$getUTM = Yii::$app->CoreFunctions->getUTM();
 
