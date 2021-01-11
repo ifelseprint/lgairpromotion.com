@@ -19,7 +19,7 @@ AppAsset::register($this);
 $script = <<<JS
   $("document").ready(function(){
 
-    appLG.App.initializeInPjax();
+    // appLG.App.initializeInPjax();
     appLG.Home.initializeInPjax();
   });
 JS;

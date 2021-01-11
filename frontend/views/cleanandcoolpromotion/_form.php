@@ -134,7 +134,7 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_2")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันได้อ่านนโยบายป้องกันข้อมูลโดยละเอียดแล้ว ตกลงยินยอมอนุญาตตามที่กำหนดไว้ในเงื่อนไขของขโยบายป้องกันข้อมูลทุกประกาศ <a href="'.Yii::$app->request->baseUrl.'/cleanandcoolpromotion/privacy-policy" style="text-decoration: underline;color: #c13442;" target="_blank">อ่านนโยบายเพิ่มเติม</a>','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
+            <?= $form->field($Register, "SELECT_2")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันได้อ่านนโยบายป้องกันข้อมูลโดยละเอียดแล้ว ตกลงยินยอมอนุญาตตามที่กำหนดไว้ในเงื่อนไขของขโยบายป้องกันข้อมูลทุกประกาศ <a href="'.Yii::$app->request->baseUrl.'/privacy-policy" style="text-decoration: underline;color: #c13442;" target="_blank">อ่านนโยบายเพิ่มเติม</a>','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
         <div class="form-group-sm row">
