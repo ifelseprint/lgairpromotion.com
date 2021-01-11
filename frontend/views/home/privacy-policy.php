@@ -9,7 +9,7 @@ AppAsset::register($this);
 	<div class="container">
 	    <div class="row">
 	        <div class="col-md-12">
-				<a href="<?php echo Yii::$app->request->baseUrl; ?>"><img src="<?php echo Yii::$app->request->baseUrl; ?>/img/logo_lg-b.png"></a>
+				<a href="<?php echo Url::base(true); ?>"><img src="<?php echo Url::base(true); ?>/img/logo_lg-b.png"></a>
 			</div>
 		</div>
 	</div>

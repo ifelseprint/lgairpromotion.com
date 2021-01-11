@@ -15,7 +15,7 @@ AppAsset::register($this);
 </div>
 
 <div class='banner' style="cursor: pointer;">
-  <img src="<?php echo Yii::$app->request->baseUrl; ?>/img/tiewtuathaipuricaremini/banner.jpg" width="100%">
+  <img src="<?php echo Url::base(true); ?>/img/tiewtuathaipuricaremini/banner.jpg" width="100%">
 </div>
   
 <?= $this->render('_form', ['Register'=> $Register,'dataSerialNumber'=>$dataSerialNumber]); ?>
