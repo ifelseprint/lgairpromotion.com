@@ -51,6 +51,7 @@ class Register extends \common\models\Register
         $dataProvider = new ActiveDataProvider([
             'pagination' => [
                 'pageSize' => $this->search_pageSize,
+                'route' => 'dashboard'
             ],
             'query' => $query,
             'sort'=> ['defaultOrder' => ['ID' => SORT_DESC]]
