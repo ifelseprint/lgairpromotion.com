@@ -15,15 +15,14 @@
 	// =========================================================================
 
 	p.initialize = function () {
+		this._enableExcel();
 		// Init events
-
         // this._tinymce();
     };
 
     p.initializeInPjax = function() {
 		this._enableInit();
 		this._eventModalView();
-		this._enableExcel();
 	};
 
 	// =========================================================================
