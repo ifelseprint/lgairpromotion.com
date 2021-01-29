@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 $form = ActiveForm::begin([
   'method' => 'get',
-  'id' => 'search-policy',
+  'id' => 'formReport',
   'layout' => 'horizontal',
   'enableClientValidation' => false,
   'options' => [ 'data-pjax' => 0 ],
@@ -83,7 +83,7 @@ $form = ActiveForm::begin([
   </div>
   <!-- /.card-body -->
   <div class="card-footer">
-    <button type="button" class="btn btn-success btn-sm"><i class="fa fa-file-excel"></i> Export</button>
+    <button type="button" class="btn btn-success btn-sm" id="download-excel-button"><i class="fa fa-file-excel"></i> Export</button>
     <div class=" float-right">
       <?= Html::submitButton('<i class="icofont icofont-search"></i> Search', ['class' => 'btn btn-info btn-sm', 'name' => 'search-button']); ?>     
       <?= Html::resetButton('<i class="icofont icofont-close"></i> Reset', ['class' => 'btn btn-secondary btn-sm reset-button', 'name' => 'reset-button']); ?>           

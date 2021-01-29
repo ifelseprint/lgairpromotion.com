@@ -162,7 +162,6 @@ $script = <<<JS
           "weekLabel": "W",
           "firstDay": 1
       },
-      maxDate: new Date(),
       drops: "down",
       showDropdowns: true,
     },function(start, end, label) {

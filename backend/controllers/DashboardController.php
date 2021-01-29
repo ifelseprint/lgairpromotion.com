@@ -11,6 +11,7 @@ use yii\web\Controller;
 
 class DashboardController extends Controller
 {
+
     /**
      * {@inheritdoc}
      */
@@ -21,7 +22,7 @@ class DashboardController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index','view'],
+                        'actions' => ['index','view','excel'],
                         'allow' => true,
                         'roles' => ['@'], // @ = login, ? = no login
                     ],
@@ -88,16 +89,31 @@ class DashboardController extends Controller
         ->one();
         return $this->renderAjax('view', ['Register' => $Register]);
     }
-    // public function actionCreate()
-    // {
-    //     echo "Create";
-    // }
-    // public function actionUpdate()
-    // {
-    //     echo "Update";
-    // }
-    // public function actionDelete()
-    // {
-    //     echo "Delete";
-    // }
+
+    public function actionExcel()
+    {
+        set_time_limit(0);
+        $post = Yii::$app->request->post();
+
+        if(Yii::$app->request->isPost){
+
+            $searchModel = new Register();
+            $dataExcel = $searchModel->search($post);
+
+            if(empty($dataExcel->models)){
+                return json_encode([
+                    "status" => false,
+                    "result" => 'No data generate report.'
+                ]);
+                exit;
+            }
+            return $this->render('excel-report', [
+                "status" => true,
+                "result" => 'Generate report successfully.',
+                'search' => $post['Register'],
+                'dataExcel' => $dataExcel->models,
+            ]);
+        }
+    }
+
 }
