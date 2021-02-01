@@ -21,10 +21,43 @@
     };
 
     p.initializeInPjax = function() {
-		this._enableInit();
+    	this._enableInit();
 		this._eventModalView();
 	};
 
+	// =========================================================================
+	// Form
+	// =========================================================================
+	p._enableForm = function () {
+
+		$('.submit-form').click(function (e){
+
+            var form = $('#formRegister');
+          
+            $('.submit-form').attr('disabled','disabled').find("i").removeClass('fa fa-floppy-o').addClass('fa fa-spin fa-spinner');
+            $('#loadingOverlay').show();
+            $.ajax({
+                url    : form.attr('action'),
+                type   : form.attr('method'),
+                data   : new FormData(form[0]),
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                success: function (response) 
+                {
+                    var dataJson = $.parseJSON(response);
+                    $('.submit-form').removeAttr('disabled').find("i").removeClass('fa fa-spin fa-spinner').addClass('fa fa-floppy-o');
+                    $('#loadingOverlay').hide();
+                    $.pjax.reload({container:"#pjax-grid", timeout: false});  //Reload GridView
+                    
+                },
+                error  : function () 
+                {
+                    console.log('internal server error');
+                }
+            });
+        });
+	};
 	// =========================================================================
 	// EVENTS
 	// =========================================================================
@@ -47,6 +80,32 @@
 		    $("body").addClass("modal-open");
 		    // $.pjax.reload({container:"#pjax-grid", timeout: false});  //Reload GridView
 		}); 
+
+		$('.datepicker_range').daterangepicker({
+		    autoUpdateInput: false,
+		    locale: {
+		        "format": "DD/MM/YYYY",
+		        "separator": " - ",
+		        "applyLabel": "Apply",
+		        "cancelLabel": "Cancel",
+		        "fromLabel": "From",
+		        "toLabel": "To",
+		        "customRangeLabel": "Custom",
+		        "weekLabel": "W",
+		        "firstDay": 1
+		    },
+		    drops: "down",
+		    showDropdowns: true,
+		},function(start, end, label) {
+		    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+		});
+	    $('.datepicker_range').on('apply.daterangepicker', function(ev, picker) {
+	        $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+	    });
+	    $('.datepicker_range').on('cancel.daterangepicker', function(ev, picker) {
+	        $(this).val('');
+	    });
+
 	}
 
 	p._enableExcel = function () {

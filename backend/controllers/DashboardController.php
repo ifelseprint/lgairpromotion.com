@@ -22,7 +22,7 @@ class DashboardController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index','view','excel'],
+                        'actions' => ['index','save','view','excel'],
                         'allow' => true,
                         'roles' => ['@'], // @ = login, ? = no login
                     ],
@@ -82,11 +82,30 @@ class DashboardController extends Controller
 
         }
     }
+    public function actionSave($id)
+    {
+        $post = Yii::$app->request->post();
+        $Register = Register::find()
+        ->where(['ID'=> base64_decode($id)])
+        ->one();
+
+        if(Yii::$app->request->isPost){
+
+            $Register->load($post);
+            $Register->QUESTION_2 = date('Y-m-d', strtotime(str_replace('/', '-', $post['Register']['QUESTION_2'])));
+            $Register->save();
+            // return $this->renderAjax('view', ['Register' => $Register]);
+            return true;
+        }
+    }
     public function actionView($id)
     {
         $Register = Register::find()
         ->where(['ID'=> base64_decode($id)])
         ->one();
+
+        $Register->QUESTION_2 = date('d/m/Y', strtotime(str_replace('-', '/', $Register->QUESTION_2)));
+
         return $this->renderAjax('view', ['Register' => $Register]);
     }
 

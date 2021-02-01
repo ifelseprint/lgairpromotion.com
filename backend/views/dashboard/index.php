@@ -147,32 +147,6 @@ $script = <<<JS
     $('.select2').select2({
       width: '100%'
     });
-    
-    $('.datepicker_range').daterangepicker({
-
-      autoUpdateInput: false,
-      locale: {
-          "format": "DD/MM/YYYY",
-          "separator": " - ",
-          "applyLabel": "Apply",
-          "cancelLabel": "Cancel",
-          "fromLabel": "From",
-          "toLabel": "To",
-          "customRangeLabel": "Custom",
-          "weekLabel": "W",
-          "firstDay": 1
-      },
-      drops: "down",
-      showDropdowns: true,
-    },function(start, end, label) {
-        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
-    $('.datepicker_range').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
-    });
-    $('.datepicker_range').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
 
     //Initialize initializeInPjax
     LG.App.initializeInPjax();
