@@ -119,6 +119,10 @@ class DashboardController extends Controller
             $searchModel = new Register();
             $dataExcel = $searchModel->search($post);
 
+            if(!empty($post['Register'])){
+                $dataExcel->pagination->pageSize = $post['Register']['search_pageSize'];
+            }
+
             if(empty($dataExcel->models)){
                 return json_encode([
                     "status" => false,
