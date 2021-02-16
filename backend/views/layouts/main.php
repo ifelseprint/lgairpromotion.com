@@ -26,7 +26,7 @@ AppAsset::register($this);
     <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="<?=Url::base(true);?>/dashboard" class="navbar-brand">
+      <a href="<?=Url::base(true);?>" class="navbar-brand">
         <img src="<?=Url::base(true);?>/img/logo.png" alt="" style="width: 100px;">
       </a>
       
@@ -38,7 +38,7 @@ AppAsset::register($this);
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item <?php echo (Yii::$app->controller->id=="dashboard" ? 'active' : '' )?>">
-            <a href="<?=Url::base(true);?>/dashboard" class="nav-link"><i class="ti-home"></i> Dashboard</a>
+            <a href="<?=Url::base(true);?>" class="nav-link"><i class="ti-home"></i> Dashboard</a>
           </li>   
         </ul>
 

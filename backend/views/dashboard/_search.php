@@ -45,7 +45,7 @@ $form = ActiveForm::begin([
       <label class="col-sm-1">แสดงต่อหน้า :</label>
       <div class="col-sm-3">
         <?php
-        $dataPageSize=['25'=>'25 Record','50'=>'50 Record','75'=>'75 Record','100'=>'100 Record'];
+        $dataPageSize=['25'=>'25 Record','50'=>'50 Record','75'=>'75 Record','100'=>'100 Record','10000'=>'Total Record'];
         ?>
         <?= $form->field($model, 'search_pageSize')->dropDownList($dataPageSize,['class'=>'form-control form-control-sm select2']); ?>
       </div>
