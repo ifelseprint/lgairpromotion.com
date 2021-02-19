@@ -12,6 +12,7 @@ class CleanandcoolpromotionController extends \yii\web\Controller
 	{
 	  	$Application = \common\models\Application::find()
         ->where(['ID'=> $this->APP_ID])
+        ->andWhere(['<=','DATE_RUN_APP', new \yii\db\Expression('NOW()')])
         ->andWhere(['>','DATE_WINNER', new \yii\db\Expression('NOW()')])
         ->one();
 
