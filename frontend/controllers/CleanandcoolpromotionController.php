@@ -6,6 +6,22 @@ use yii\web\UploadedFile;
 use frontend\models\Register;
 class CleanandcoolpromotionController extends \yii\web\Controller
 {
+	public $APP_ID = 1;
+
+	public function beforeAction($action)
+	{
+	  	$Application = \common\models\Application::find()
+        ->where(['ID'=> $this->APP_ID])
+        ->andWhere(['>','DATE_WINNER', new \yii\db\Expression('NOW()')])
+        ->one();
+
+        if(empty($Application)){
+        	echo "Campaign inactive.";
+    		return false;	
+        }
+        return true;
+	}
+
     public function actionIndex()
     {
         $this->layout = 'cleanandcoolpromotion/main';
@@ -18,7 +34,7 @@ class CleanandcoolpromotionController extends \yii\web\Controller
         return $this->render('index', [
             'Register' => $Register,
             'dataSerialNumber' => ArrayHelper::map(\common\models\SerialNumber::find()
-            ->where(['APP_ID' => 1])
+            ->where(['APP_ID' => $this->APP_ID])
             ->groupBy(['MODEL'])
             ->all(), 'MODEL', 'MODEL')
     	]);
@@ -40,13 +56,13 @@ class CleanandcoolpromotionController extends \yii\web\Controller
                 $postDateService = date('Y-m-d', strtotime(str_replace('/', '-', $post['Register']['QUESTION_2'])));
 
             	$SerialNumber = \common\models\SerialNumber::find()
-		        ->where(['APP_ID'=> 1])
+		        ->where(['APP_ID'=> $this->APP_ID])
 		        ->andWhere(['MODEL'=> $postModel])
 		        ->andWhere(['SERIAL_NUMBER'=> $postSerialNumber])
 		        ->andWhere(['IS_STATUS' => '0'])
 		        ->one();
 
-		        $Register->APP_ID = '1';
+		        $Register->APP_ID = $this->APP_ID;
 		        $Register->FULLNAME = $postFirstname." ".$postLastname;
 		        $Register->CREATED_DATETIME = new \yii\db\Expression('NOW()');
 		        $Register->CREATED_AT = 'user-event';
@@ -100,6 +116,11 @@ class CleanandcoolpromotionController extends \yii\web\Controller
            			"response" => $Register->getErrors()
            		]);
            	}
+        }else{
+        	return json_encode([
+        		"status" => false,
+        		"response" => 'error submit form'
+        	]);
         }
     }
 }
