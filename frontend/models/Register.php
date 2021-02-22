@@ -8,9 +8,17 @@ class Register extends \common\models\Register
 {
     public $FIRSTNAME;
     public $LASTNAME;
+    
+    public $Q1;
+    public $Q2;
+    public $Q3;
+    public $Q4;
+    public $Q5;
+
     public function rules()
     {
         return array_merge(parent::rules(), [
+            [['Q1', 'Q2', 'Q3', 'Q4', 'Q5'], 'safe'],
             [['FIRSTNAME', 'LASTNAME'], 'string', 'max' => 250],
         ]);
     }

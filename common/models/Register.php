@@ -11,9 +11,14 @@ use Yii;
  * @property int|null $APP_ID
  * @property string|null $FB_ID
  * @property string|null $FB_PICTURE
+ * @property string|null $PREFIX
  * @property string|null $FULLNAME
  * @property string|null $TEL
  * @property string|null $EMAIL
+ * @property string|null $ID_CARD_NO
+ * @property string|null $ID_CARD_IMAGE
+ * @property string|null $ID_CARD_IMAGE_PATH
+ * @property string|null $BIRTHDAY
  * @property string|null $ADDRESS
  * @property string|null $ZIPCODE
  * @property string|null $PROVINCE
@@ -40,6 +45,7 @@ use Yii;
  * @property string|null $PATH_FILE_4
  * @property string|null $PATH_FILE_5
  * @property string|null $IP
+ * @property string|null $IS_AGREE
  * @property string|null $IS_SHARE
  * @property string|null $IS_STATUS
  * @property string|null $IS_APPROVED
@@ -68,9 +74,9 @@ class Register extends \yii\db\ActiveRecord
     {
         return [
             [['APP_ID'], 'integer'],
-            [['QUESTION_1', 'QUESTION_2', 'QUESTION_3', 'QUESTION_4', 'QUESTION_5', 'IS_SHARE', 'IS_STATUS', 'IS_APPROVED', 'UTM_SOURCE', 'UTM_MEDIUM', 'UTM_CAMPAIGN'], 'string'],
-            [['CREATED_DATETIME', 'UPDATED_DATETIME'], 'safe'],
-            [['FB_ID'], 'string', 'max' => 100],
+            [['BIRTHDAY', 'CREATED_DATETIME', 'UPDATED_DATETIME'], 'safe'],
+            [['QUESTION_1', 'QUESTION_2', 'QUESTION_3', 'QUESTION_4', 'QUESTION_5', 'IS_AGREE', 'IS_SHARE', 'IS_STATUS', 'IS_APPROVED', 'UTM_SOURCE', 'UTM_MEDIUM', 'UTM_CAMPAIGN'], 'string'],
+            [['FB_ID', 'PREFIX', 'ID_CARD_NO', 'ID_CARD_IMAGE', 'ID_CARD_IMAGE_PATH'], 'string', 'max' => 100],
             [['FB_PICTURE', 'FULLNAME', 'TEL', 'EMAIL', 'ADDRESS', 'ZIPCODE', 'PROVINCE', 'AMPHUR', 'DISTRICT', 'SELECT_1', 'SELECT_2', 'SELECT_3', 'SELECT_4', 'SELECT_5', 'FILE_1', 'FILE_2', 'FILE_3', 'FILE_4', 'FILE_5', 'IP', 'CREATED_AT', 'UPDATED_AT'], 'string', 'max' => 255],
             [['PATH_FILE_1', 'PATH_FILE_2', 'PATH_FILE_3', 'PATH_FILE_4', 'PATH_FILE_5'], 'string', 'max' => 20],
         ];
@@ -86,9 +92,14 @@ class Register extends \yii\db\ActiveRecord
             'APP_ID' => 'App ID',
             'FB_ID' => 'Fb ID',
             'FB_PICTURE' => 'Fb Picture',
+            'PREFIX' => 'Prefix',
             'FULLNAME' => 'Fullname',
             'TEL' => 'Tel',
             'EMAIL' => 'Email',
+            'ID_CARD_NO' => 'Id Card No',
+            'ID_CARD_IMAGE' => 'Id Card Image',
+            'ID_CARD_IMAGE_PATH' => 'Id Card Image Path',
+            'BIRTHDAY' => 'Birthday',
             'ADDRESS' => 'Address',
             'ZIPCODE' => 'Zipcode',
             'PROVINCE' => 'Province',
@@ -115,6 +126,7 @@ class Register extends \yii\db\ActiveRecord
             'PATH_FILE_4' => 'Path File 4',
             'PATH_FILE_5' => 'Path File 5',
             'IP' => 'Ip',
+            'IS_AGREE' => 'Is Agree',
             'IS_SHARE' => 'Is Share',
             'IS_STATUS' => 'Is Status',
             'IS_APPROVED' => 'Is Approved',

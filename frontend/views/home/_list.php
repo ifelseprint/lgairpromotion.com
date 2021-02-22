@@ -25,19 +25,19 @@ use yii\helpers\Url;
 				</div>
 			</div>
 		</div> -->
-		<!-- <div class="col-md-3 campaign-inactive">
+		<!-- <div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">
-						<img width="100%" src="<?php echo Url::base(true); ?>/img/homepage_2.jpg" >
+						<img width="100%" src="<?php echo Url::base(true); ?>/img/thumb626x522.png" >
 					</a>
 				</div>
 				<div class="homepage-list homepage-list-header">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">LG Covid-19 Care</a>
 				</div>
 				<div class="homepage-list homepage-list-detail">
-					<div>เมื่อซื้อเครื่องฟอกอากาศรุ่น PuriCare Mini รับฟรีกระเป๋าเดินทาง Mini Luggage จำนวน 1 ใบ</div>
-					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 1 มกราคม 2564 – 28 กุมภาพันธ์ 2564</div>
+					<div>xxxx</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ xx มกราคม xxx – xx กุมภาพันธ์ xx</div>
 				</div>
 				<div class="homepage-list homepage-list-button">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">ดูเพิ่มเติม</a>

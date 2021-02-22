@@ -46,7 +46,8 @@
 
   		$('input[type="file"]').change(function(e){
         	var fileName = e.target.files[0].name;
-        	$('.file_result').html('ไฟล์ที่คุณได้เลือกอัพโหลด คือ "' + fileName +  '" .');
+        	var preview = $(this).attr('target_preview');
+        	$(preview).html('ไฟล์ที่คุณได้เลือกอัพโหลด คือ "' + fileName +  '" .');
 		});
 
 		$.getJSON('js/area.json').done(
