@@ -46,3 +46,20 @@ body {
 		display: block !important;
 	}
 }
+
+.campaign-inactive{
+	color: gray !important;
+}
+.campaign-inactive .homepage-list-button a {
+	background: gray !important;
+}
+.campaign-inactive a{
+	pointer-events: none !important;
+}
+.campaign-inactive img{
+    filter: gray; /* IE */
+    -webkit-filter: grayscale(1); /* Old WebKit */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    filter: url(resources.svg#desaturate); /* older Firefox */
+    filter: grayscale(100%); /* Current draft standard */
+}

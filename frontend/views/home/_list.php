@@ -25,12 +25,35 @@ use yii\helpers\Url;
 				</div>
 			</div>
 		</div> -->
-		<div class="col-md-3">
+		<!-- <div class="col-md-3 campaign-inactive">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
-					<img width="100%" src="<?php echo Url::base(true); ?>/img/homepage_1.jpg">
+					<a href="<?php echo Url::base(true); ?>/lgcovid19care">
+						<img width="100%" src="<?php echo Url::base(true); ?>/img/homepage_2.jpg" >
+					</a>
 				</div>
-				<div class="homepage-list homepage-list-header">Clean & Cool DualCool DualCare</div>
+				<div class="homepage-list homepage-list-header">
+					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">LG Covid-19 Care</a>
+				</div>
+				<div class="homepage-list homepage-list-detail">
+					<div>เมื่อซื้อเครื่องฟอกอากาศรุ่น PuriCare Mini รับฟรีกระเป๋าเดินทาง Mini Luggage จำนวน 1 ใบ</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 1 มกราคม 2564 – 28 กุมภาพันธ์ 2564</div>
+				</div>
+				<div class="homepage-list homepage-list-button">
+					<a href="<?php echo Url::base(true); ?>/lgcovid19care">ดูเพิ่มเติม</a>
+				</div>
+			</div>
+		</div> -->
+		<div class="col-md-3 campaign-inactive">
+			<div class="col-md-12" style="padding: 10px 25px;">
+				<div class="homepage-list homepage-list-img">
+					<a href="<?php echo Url::base(true); ?>/cleanandcoolpromotion">
+						<img width="100%" src="<?php echo Url::base(true); ?>/img/homepage_1.jpg">
+					</a>
+				</div>
+				<div class="homepage-list homepage-list-header">
+					<a href="<?php echo Url::base(true); ?>/cleanandcoolpromotion" style="color: #A50034">Clean & Cool DualCool DualCare</a>
+				</div>
 				<div class="homepage-list homepage-list-detail">
 					<div>เพียงซื้อเครื่องปรับอากาศ PuriCool Series ทุก BTU ฟรีบริการล้างเครื่องปรับอากาศพร้อมพ่นน้ำยาฆ่าเชื้อ Covid-19 และแผ่นฟิลเตอร์กรองฝุ่น PM1.0</div>
 					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 5 ธันวาคม 2563 – 20 กุมภาพันธ์ 2564</div>

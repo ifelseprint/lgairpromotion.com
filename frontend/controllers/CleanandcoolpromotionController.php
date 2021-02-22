@@ -17,7 +17,7 @@ class CleanandcoolpromotionController extends \yii\web\Controller
         ->one();
 
         if(empty($Application)){
-        	echo "Campaign inactive.";
+        	echo "ขณะนี้กิจกรรม Clean & Cool Dual Cool Dual Care หมดระยะเวลาการลงทะเบียนรับสิทธิ์ <br> ฟรีบริการล้างเครื่องปรับอากาศพร้อมพ่นน้ำยาฆ่าเชื้อ Covid-19 และแผ่นฟิลเตอร์กรองฝุ่น PM1.0 แล้ว <br> ท่านสามารถติดตามข่าวสารโปรโมชั่นจากเครื่องปรับอากาศแอลจีได้ทาง <a href='https://www.lgairpromotion.com'>www.lgairpromotion.com</a>";
     		return false;	
         }
         return true;
