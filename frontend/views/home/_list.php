@@ -25,7 +25,7 @@ use yii\helpers\Url;
 				</div>
 			</div>
 		</div> -->
-		<!-- <div class="col-md-3">
+		<div class="col-md-3">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">
@@ -33,7 +33,7 @@ use yii\helpers\Url;
 					</a>
 				</div>
 				<div class="homepage-list homepage-list-header">
-					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">LG Covid-19 Care</a>
+					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">Stay Safe with LG DualCool UV nano™</a>
 				</div>
 				<div class="homepage-list homepage-list-detail">
 					<div>xxxx</div>
@@ -43,8 +43,8 @@ use yii\helpers\Url;
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">ดูเพิ่มเติม</a>
 				</div>
 			</div>
-		</div> -->
-		<div class="col-md-3">
+		</div>
+		<div class="col-md-3 campaign-inactive">
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<a href="<?php echo Url::base(true); ?>/cleanandcoolpromotion">

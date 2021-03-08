@@ -34,8 +34,8 @@
         $('.datepicker').daterangepicker({
             singleDatePicker: true,
             autoUpdateInput: false,
-            minDate: '01/03/2021',
-            maxDate: '31/12/2021',
+            // minDate: '01/03/2021',
+            // maxDate: '31/12/2021',
             locale: {
                 "format": "DD/MM/YYYY"
             },

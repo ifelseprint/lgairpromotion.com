@@ -69,6 +69,7 @@ $form = ActiveForm::begin([
           <label class="col-sm-2">เบอร์โทรศัพท์ <span class="field_required">*</span> :</label>
           <div class="col-sm-4">
             <?= $form->field($Register, 'TEL')->textInput(['class' => 'form-control form-control-sm','id'=>'TEL','required'=> true,'onkeypress' =>'return appLG.App.OnlyNumbers(event)','pattern'=> '^0[0-9]{8,10}','maxlength' =>'10','data-msg'=>'ข้อมูลเบอร์โทรศัพท์ไม่ถูกต้อง และห้ามเป็นค่าว่าง'])?>
+            <div style="font-size: 14px;color: #ababab;"><span class="field_required">*</span> หมายเลขโทรศัพท์ที่ใช้งานในปัจจุบันเท่านั้น</div>
           </div>
 
           <label class="col-sm-2">อีเมล <span class="field_required">*</span> :</label>
@@ -143,30 +144,27 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-3">ช่องทางการจัดจำหน่าย <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?php
-            $dataSELECT4 = ['shop1'=>'shop1','shop2'=>'shop2','shop3'=>'shop3'];
-            ?>
-            <?= $form->field($Register, 'QUESTION_3')->dropDownList($dataSELECT4,['prompt'=>'::: เลือก :::','class'=>'form-control form-control-sm select2','id' => 'QUESTION_3','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุช่องทางที่ซื้อสินค้า']); ?>
+            <?= $form->field($Register, 'QUESTION_3')->dropDownList($dataShop,['prompt'=>'::: เลือก :::','class'=>'form-control form-control-sm select2','id' => 'QUESTION_3','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุช่องทางที่ซื้อสินค้า']); ?>
+            <div style="font-size: 14px;color: #ababab;"><span class="field_required">*</span> ระบุข้อมูลเป็นภาษาไทยเท่านั้น</div>
           </div>
         </div>
-
         <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">วันที่ต้องการรับบริการล้างแอร์ <span class="field_required">*</span> :</label>
+          <label class="col-sm-3">วันที่ซื้อสินค้าตามใบกำกับภาษี <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <div class="input-calendar">
-              <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','data-msg'=>'คุณยังไม่ได้ระบุวันที่ต้องการรับบริการล้างแอร์'])?>
+              <?= $form->field($Register, 'QUESTION_2')->textInput(['class' => 'form-control form-control-sm datepicker','id'=>'QUESTION_2','required'=> true,'pattern'=>'\d{1,2}/\d{1,2}/\d{4}','data-msg'=>'คุณยังไม่ได้ระบุวันที่ซื้อสินค้าตามใบกำกับภาษี'])?>
             </div>
-            <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มีนาคม 2564 - 31 ธันวาคม 2564</span>
+            <!-- <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> กำหนดให้เริ่มรับบริการได้ตั้งแต่วันที่ 1 มีนาคม 2564 - 31 ธันวาคม 2564</span> -->
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">แนบใบเสร็จสินค้า <span class="field_required">*</span> :</label>
+          <label class="col-sm-3">รูปภาพใบกำกับภาษี <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <label for="FILE_1" class="custom-file-upload">
                 <i class="fa fa-cloud-upload"></i> อัพโหลดไฟล์
             </label>
             <?= $form->field($Register, 'FILE_1')->fileInput(['class' => 'form-control form-control-sm','id'=>'FILE_1','required'=> true,'target_preview'=>'#preview_file1','pattern' => '^.+\.(jpg|png|jpeg)$','data-msg'=>'คุณยังไม่ได้ระบุไฟล์แนบใบเสร็จสินค้า หรือนามสกุลไฟล์ไม่ถูกต้อง jpg,png,jpeg'])?>
-            <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> ใบเสร็จที่ลงทะเบียนต้องออกเป็นใบกำกับภาษีเท่านั้น</span>
+            <span style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> ใบกำกับภาษีประเภทบุคคลธรรมดาเท่านั้น</span>
             <div id="preview_file1" style=" font-size: 14px; color: #ababab;"></div>
           </div>
         </div>
@@ -179,14 +177,14 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเลคทรอนิคส์','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
+            <?= $form->field($Register, "SELECT_3")->checkbox(['value' => "1",'label' => 'ฉันต้องการที่จะได้รับข่าวสารล่าสุดและข้อเสนอจากแอลจี อีเลคทรอนิคส์','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
 
         <div class="form-group-sm row">
           <label class="col-sm-3"></label>
           <div class="col-sm-9">
-            <?= $form->field($Register, "SELECT_4")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันยินยอมให้เปิดเผยข้อมูลส่วนบุคคลแก่บริษัทสินทรัพย์ประกันภัย','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
+            <?= $form->field($Register, "SELECT_4")->checkbox(['value' => "1",'required'=> true,'label' => 'ฉันยินยอมให้เปิดเผยข้อมูลส่วนบุคคลแก่บริษัท TQM ที่ปรึกษาและนายหน้าประกัน เพื่อส่งต่อข้อมูลสำหรับทำประกัน COVID-19 ของบริษัทสินทรัพย์ประกันภัยเท่านั้น','data-msg'=>'คุณยังไม่ได้เลือกยอมรับข้อนี้']); ?>
           </div>
         </div>
 
@@ -225,6 +223,7 @@ $form = ActiveForm::begin([
                 }
               ]
             ); ?>
+            <div style=" font-size: 14px; color: #ababab;"><span class="field_required">*</span> หากท่านมีประกัน COVID-19 จากบริษัทสินทรัพย์ประกันภัยอยู่แล้ว จะสามารถเลือกรับได้เพียง 1 กรมธรรม์เท่านั้น</div>
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
@@ -232,38 +231,6 @@ $form = ActiveForm::begin([
             <div>3. ท่านมีอาการเป็นไข้สูง ไอ จาม จมูกไม่รับกลิ่น ลิ้นไม่รับรส หรืออาการอื่นๆ ที่เข้าข่ายติดเชื้อจากไวรัสโคโรนา 2019 (COVID-19) มาก่อนการสมัครประกันภัย</div>
             <?= $form->field($Register, 'Q3')->radioList(
               [1 => 'ใช่', 0 => 'ไม่ใช่'],
-              [
-                'item' => function($index, $label, $name, $checked, $value) {
-                  $return = '<label>';
-                  $return .= '<input type="radio" required data-msg="คุณยังไม่ได้เลือกข้อนี้" name="' . $name . '" value="' . $value . '"> ';
-                  $return .= $label.'</label>';
-                  return $return;
-                }
-              ]
-            ); ?>
-          </div>
-        </div>
-        <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <div class="col-sm-12">
-            <div>4. ในช่วง 14 วัน ท่านได้มีการเดินทางเข้าออก หรือพักอาศัยในจังหวัด สมุทรสาคร ระยอง ชลบุรี หรือไม่</div>
-            <?= $form->field($Register, 'Q4')->radioList(
-              [1 => 'มี', 0 => 'ไม่มี'],
-              [
-                'item' => function($index, $label, $name, $checked, $value) {
-                  $return = '<label>';
-                  $return .= '<input type="radio" required data-msg="คุณยังไม่ได้เลือกข้อนี้" name="' . $name . '" value="' . $value . '"> ';
-                  $return .= $label.'</label>';
-                  return $return;
-                }
-              ]
-            ); ?>
-          </div>
-        </div>
-        <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <div class="col-sm-12">
-            <div>5. ท่านได้เดินทางกลับมาจากประเทศกลุ่มเสี่ยง ตามประกาศของกระทรวงสาธารณะสุข หรือไม่</div>
-            <?= $form->field($Register, 'Q5')->radioList(
-              [1 => 'ใช่', 0 => 'ไม่มี'],
               [
                 'item' => function($index, $label, $name, $checked, $value) {
                   $return = '<label>';

@@ -15,10 +15,10 @@ AppAsset::register($this);
 </div>
 
 <div class='banner' style="cursor: pointer;">
-  <img src="<?php echo Url::base(true); ?>/img/lgcovid19care/banner.png" width="100%">
+  <img src="<?php echo Url::base(true); ?>/img/lgcovid19care/banner.jpg" width="100%">
 </div>
   
-<?= $this->render('_form', ['Register'=> $Register,'dataSerialNumber'=>$dataSerialNumber]); ?>
+<?= $this->render('_form', ['Register'=> $Register,'dataSerialNumber'=>$dataSerialNumber,'dataShop'=>$dataShop]); ?>
 
 <hr>
 

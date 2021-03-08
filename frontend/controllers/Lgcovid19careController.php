@@ -37,7 +37,10 @@ class Lgcovid19careController extends \yii\web\Controller
             'dataSerialNumber' => ArrayHelper::map(\common\models\SerialNumber::find()
             ->where(['APP_ID' => $this->APP_ID])
             ->groupBy(['MODEL'])
-            ->all(), 'MODEL', 'MODEL')
+            ->all(), 'MODEL', 'MODEL'),
+            'dataShop' => ArrayHelper::map(\common\models\Shop::find()
+            ->where(['is_active' => 1])
+            ->all(), 'id', 'shop_name')
     	]);
     }
 
@@ -54,8 +57,6 @@ class Lgcovid19careController extends \yii\web\Controller
                 $Quiz[] = $post['Register']['Q1'];
                 $Quiz[] = $post['Register']['Q2'];
                 $Quiz[] = $post['Register']['Q3'];
-                $Quiz[] = $post['Register']['Q4'];
-                $Quiz[] = $post['Register']['Q5'];
 
             	$postFirstname = $post['Register']['FIRSTNAME'];
             	$postLastname = $post['Register']['LASTNAME'];
