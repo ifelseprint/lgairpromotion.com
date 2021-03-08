@@ -116,7 +116,7 @@ class Lgcovid19careController extends \yii\web\Controller
 
 	                    return json_encode([
 	                        "status" => true,
-	                        "response" => '<div class="text-center"><h5><b>ท่านได้ทำการลงทะเบียนผู้ใช้และรับสิทธิ์เรียบร้อยแล้ว</b></h5>ผู้ที่ได้รับสิทธิ์จะได้รับข้อความ SMS ยืนยัน<br/>จากTQM บริษัทที่ปรึกษาและนายหน้าประกัน</div>'
+	                        "response" => '<div class="text-center"><h5><b>ท่านได้ทำการลงทะเบียนผู้ใช้และรับสิทธิ์เรียบร้อยแล้ว</b></h5>ผู้ที่ได้รับสิทธิ์จะได้รับข้อความ SMS ยืนยัน<br/>จาก TQM บริษัทที่ปรึกษาและนายหน้าประกัน</div>'
 	                    ]);
 	                }else{
 	                    return json_encode([
