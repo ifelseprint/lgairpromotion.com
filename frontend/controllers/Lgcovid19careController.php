@@ -40,6 +40,7 @@ class Lgcovid19careController extends \yii\web\Controller
             ->all(), 'MODEL', 'MODEL'),
             'dataShop' => ArrayHelper::map(\common\models\Shop::find()
             ->where(['is_active' => 1])
+            ->orderBy(['shop_name' => SORT_ASC])
             ->all(), 'id', 'shop_name')
     	]);
     }
