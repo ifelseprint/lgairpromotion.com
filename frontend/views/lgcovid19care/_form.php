@@ -142,9 +142,9 @@ $form = ActiveForm::begin([
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">ช่องทางการจัดจำหน่าย <span class="field_required">*</span> :</label>
+          <label class="col-sm-3">ร้านค้าที่ซื้อสินค้า <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
-            <?= $form->field($Register, 'QUESTION_3')->dropDownList($dataShop,['prompt'=>'::: เลือก :::','class'=>'form-control form-control-sm select2','id' => 'QUESTION_3','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุช่องทางที่ซื้อสินค้า']); ?>
+            <?= $form->field($Register, 'QUESTION_3')->dropDownList($dataShop,['prompt'=>'::: เลือก :::','class'=>'form-control form-control-sm select2','id' => 'QUESTION_3','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุร้านค้าที่ซื้อสินค้า']); ?>
             <div style="font-size: 14px;color: #ababab;"><span class="field_required">*</span> ระบุข้อมูลเป็นภาษาไทยเท่านั้น</div>
           </div>
         </div>
