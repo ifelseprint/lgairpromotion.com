@@ -38,6 +38,10 @@ class Register extends \common\models\Register
             [['search_date_range','search_date_service','search_register_name','search_register_email','search_register_tel','search_register_model','search_register_serial'], 'safe'],
         ]);
     }
+    public function getShop()
+    {
+        return $this->hasOne(\common\models\Shop::className(), ['id' => 'QUESTION_3']);
+    }
     public function getApplication()
     {
         return $this->hasOne(\common\models\Application::className(), ['ID' => 'APP_ID']);

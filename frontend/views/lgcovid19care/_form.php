@@ -136,7 +136,7 @@ $form = ActiveForm::begin([
           </div>
         </div>
         <div class="form-group-sm row" style="margin-bottom: 10px;">
-          <label class="col-sm-3">หมายเลขซีเรียล <span class="field_required">*</span> :</label>
+          <label class="col-sm-3">หมายเลขซีเรียลคอยล์เย็น (Indoor) <span class="field_required">*</span> :</label>
           <div class="col-sm-9">
             <?= $form->field($Register, 'QUESTION_1')->textInput(['class' => 'form-control form-control-sm','id'=>'QUESTION_1','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุหมายเลขซีเรียล'])?>
           </div>
@@ -197,7 +197,7 @@ $form = ActiveForm::begin([
           <div class="col-sm-12">
             <div>1. ท่านเป็นผู้ที่มีสัญชาติไทย และพักอาศัยอยู่ในประเทศไทย หรือไม่</div>
             <?= $form->field($Register, 'Q1')->radioList(
-              [1 => 'ใช่', 0 => 'ไม่ใช่'],
+              ['Y' => 'ใช่', 'N' => 'ไม่ใช่'],
               [
                 'item' => function($index, $label, $name, $checked, $value) {
                   $return = '<label>';
@@ -213,7 +213,7 @@ $form = ActiveForm::begin([
           <div class="col-sm-12">
             <div>2. ท่านมีหรือได้ขอเอาประกันที่คุ้มครองการเจ็บป่วยด้วยโรคติดเชื้อจากไวรัสโคโรนา 2019 (COVID-19) จากบริษัทสินทรัพย์ประกันภัย หรือไม่</div>
             <?= $form->field($Register, 'Q2')->radioList(
-              [1 => 'ใช่', 0 => 'ไม่ใช่'],
+              ['Y' => 'ใช่', 'N' => 'ไม่ใช่'],
               [
                 'item' => function($index, $label, $name, $checked, $value) {
                   $return = '<label>';
@@ -230,7 +230,7 @@ $form = ActiveForm::begin([
           <div class="col-sm-12">
             <div>3. ท่านมีอาการเป็นไข้สูง ไอ จาม จมูกไม่รับกลิ่น ลิ้นไม่รับรส หรืออาการอื่นๆ ที่เข้าข่ายติดเชื้อจากไวรัสโคโรนา 2019 (COVID-19) มาก่อนการสมัครประกันภัย</div>
             <?= $form->field($Register, 'Q3')->radioList(
-              [1 => 'ใช่', 0 => 'ไม่ใช่'],
+              ['Y' => 'ใช่', 'N' => 'ไม่ใช่'],
               [
                 'item' => function($index, $label, $name, $checked, $value) {
                   $return = '<label>';

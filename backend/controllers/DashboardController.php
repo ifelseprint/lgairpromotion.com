@@ -93,6 +93,7 @@ class DashboardController extends Controller
 
             $Register->load($post);
             $Register->QUESTION_2 = date('Y-m-d', strtotime(str_replace('/', '-', $post['Register']['QUESTION_2'])));
+            $Register->BIRTHDAY = date('Y-m-d', strtotime(str_replace('/', '-', $post['Register']['BIRTHDAY'])));
             $Register->save();
             // return $this->renderAjax('view', ['Register' => $Register]);
             return true;
@@ -105,6 +106,7 @@ class DashboardController extends Controller
         ->one();
 
         $Register->QUESTION_2 = date('d/m/Y', strtotime(str_replace('-', '/', $Register->QUESTION_2)));
+        $Register->BIRTHDAY = date('d/m/Y', strtotime(str_replace('-', '/', $Register->BIRTHDAY)));
 
         return $this->renderAjax('view', ['Register' => $Register]);
     }

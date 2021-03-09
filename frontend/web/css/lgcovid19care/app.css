@@ -1,3 +1,16 @@
 /*.page-wrapper{
     padding: 20px 0px;
 }*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/*tr:nth-child(even){background-color: #f2f2f2}*/
