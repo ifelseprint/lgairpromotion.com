@@ -12,5 +12,13 @@ th, td {
   padding: 8px;
   border: 1px solid #ddd;
 }
-
+.bigdrop {
+  width: 300px !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  margin-top: -79px !important;
+  margin-left: -150px !important;
+  background: #efefef !important;
+}
 /*tr:nth-child(even){background-color: #f2f2f2}*/

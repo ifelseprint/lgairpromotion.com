@@ -64,6 +64,7 @@
 					placeholder: "พิมพ์รหัสไปรษณีย์",
 					templateSelection: zipSelTemplate,
 					templateResult: zipResTemplate,
+					dropdownCssClass : 'bigdrop',
 				}).on('select2:select', function (evt) {
 					var data=evt.params.data;
 					$('#DISTRICT').val(data.d);
