@@ -50,6 +50,15 @@
         	$(preview).html('ไฟล์ที่คุณได้เลือกอัพโหลด คือ "' + fileName +  '" .');
 		});
 
+
+  		$('#ZIPCODE').on('select2:opening', function (e) {
+		  	$('.overlay').show();
+		});
+
+		$('#ZIPCODE').on('select2:close', function (e) {
+		  	$('.overlay').hide();
+		});
+
 		$.getJSON('js/area.json').done(
 		    function( data ) {
 

@@ -20,5 +20,19 @@ th, td {
   margin-top: -79px !important;
   margin-left: -150px !important;
   background: #efefef !important;
+  z-index: 100000;
+}
+.overlay{
+  -ms-opacity: 0.4;
+  background: #999;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 10000;
 }
 /*tr:nth-child(even){background-color: #f2f2f2}*/

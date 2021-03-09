@@ -106,7 +106,9 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-2">รหัสไปรษณีย์ <span class="field_required">*</span> :</label>
           <div class="col-sm-4">
+
             <?= $form->field($Register, 'ZIPCODE')->dropDownList([],['prompt'=>'พิมพ์รหัสไปรษณีย์','class'=>'form-control form-control-sm select2','id' => 'ZIPCODE','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุรหัสไปรษณีย์']); ?>
+            <div class="overlay" style="display: none;"></div>
           </div>
           <label class="col-sm-2">จังหวัด <span class="field_required">*</span> :</label>
           <div class="col-sm-4">
