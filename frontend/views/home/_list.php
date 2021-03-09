@@ -33,11 +33,11 @@ use yii\helpers\Url;
 					</a>
 				</div>
 				<div class="homepage-list homepage-list-header">
-					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">Stay Safe with LG DualCool UV nano™</a>
+					<a href="<?php echo Url::base(true); ?>/lgcovid19care" style="color: #A50034">Stay Safe with LG DualCool UVnano™</a>
 				</div>
 				<div class="homepage-list homepage-list-detail">
-					<div>xxxx</div>
-					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ xx มกราคม xxx – xx กุมภาพันธ์ xx</div>
+					<div>รับฟรี ประกัน COVID-19 + ประกันแพ้วัคซีน มูลค่าสูงสุด 100,000 บาท เมื่อซื้อเครื่องปรับอากาศแอลจี รุ่นที่ร่วมรายการ</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 10 มีนาคม 2564 – 9 พฤษภาคม 2564</div>
 				</div>
 				<div class="homepage-list homepage-list-button">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">ดูเพิ่มเติม</a>
