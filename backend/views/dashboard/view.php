@@ -56,7 +56,7 @@ $form = ActiveForm::begin([
 		<td><?= $form->field($Register, 'EMAIL')->textInput(['class' => 'form-control form-control-sm'])?></td>
 	</tr>
 
-	<?php if(!empty($Register->application->ID_CARD_NO)){ ?>
+	<?php if(!empty($Register->ID_CARD_NO)){ ?>
 	<tr>
 		<td>เลขบัตรประชาชน : </td>
 		<td><?= $form->field($Register, 'ID_CARD_NO')->textInput(['class' => 'form-control form-control-sm'])?></td>
