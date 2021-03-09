@@ -29,7 +29,7 @@ use yii\helpers\Url;
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">
-						<img width="100%" src="<?php echo Url::base(true); ?>/img/thumb626x522.png" >
+						<img width="100%" src="<?php echo Url::base(true); ?>/img/lgcovid19care/homepage.jpg" >
 					</a>
 				</div>
 				<div class="homepage-list homepage-list-header">
@@ -48,7 +48,7 @@ use yii\helpers\Url;
 			<div class="col-md-12" style="padding: 10px 25px;">
 				<div class="homepage-list homepage-list-img">
 					<a href="<?php echo Url::base(true); ?>/cleanandcoolpromotion">
-						<img width="100%" src="<?php echo Url::base(true); ?>/img/homepage_1.jpg">
+						<img width="100%" src="<?php echo Url::base(true); ?>/img/cleanandcoolpromotion/homepage.jpg">
 					</a>
 				</div>
 				<div class="homepage-list homepage-list-header">
