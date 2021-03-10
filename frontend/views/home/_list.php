@@ -37,7 +37,7 @@ use yii\helpers\Url;
 				</div>
 				<div class="homepage-list homepage-list-detail">
 					<div>รับฟรี ประกัน COVID-19 + ประกันแพ้วัคซีน มูลค่าสูงสุด 100,000 บาท เมื่อซื้อเครื่องปรับอากาศแอลจี รุ่นที่ร่วมรายการ</div>
-					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 10 มีนาคม 2564 – 9 พฤษภาคม 2564</div>
+					<div class="homepage-list homepage-list-date">ตั้งแต่วันที่ 10 มีนาคม 2564 – 30 เมษายน 2564</div>
 				</div>
 				<div class="homepage-list homepage-list-button">
 					<a href="<?php echo Url::base(true); ?>/lgcovid19care">ดูเพิ่มเติม</a>
