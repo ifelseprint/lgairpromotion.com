@@ -38,7 +38,7 @@ $form = ActiveForm::begin([
             <div class="form-group-sm row" style="margin-bottom: 10px;">
               <div class="col-3 col-sm-4">
                 <?php
-                $dataPrefix = ['นาย'=>'นาย','นาง'=>'นาง','นางสาว'=>'นางสาว'];
+                $dataPrefix = ['นาย'=>'นาย','นาง'=>'นาง','นางสาว'=>'นางสาว','เด็กชาย'=>'เด็กชาย','เด็กหญิง'=>'เด็กหญิง'];
                 ?>
                 <?= $form->field($Register, 'PREFIX')->dropDownList($dataPrefix,['class'=>'form-control form-control-sm select2','id' => 'PREFIX','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุคำนำหน้าชื่อ']); ?>
               </div>
