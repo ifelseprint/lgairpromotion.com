@@ -68,7 +68,7 @@ $form = ActiveForm::begin([
         <div class="form-group-sm row" style="margin-bottom: 10px;">
           <label class="col-sm-2">เบอร์โทรศัพท์ <span class="field_required">*</span> :</label>
           <div class="col-sm-4">
-            <?= $form->field($Register, 'TEL')->textInput(['class' => 'form-control form-control-sm','id'=>'TEL','required'=> true,'onkeypress' =>'return appLG.App.OnlyNumbers(event)','pattern'=> '^0[0-9]{8,10}','maxlength' =>'10','data-msg'=>'ข้อมูลเบอร์โทรศัพท์ไม่ถูกต้อง และห้ามเป็นค่าว่าง'])?>
+            <?= $form->field($Register, 'TEL')->textInput(['class' => 'form-control form-control-sm','id'=>'TEL','required'=> true,'onkeypress' =>'return appLG.App.OnlyNumbers(event)','pattern'=> '^0[0-9]{10}','maxlength' =>'10','data-msg'=>'ข้อมูลเบอร์โทรศัพท์ไม่ถูกต้อง และห้ามเป็นค่าว่าง'])?>
             <div style="font-size: 14px;color: #ababab;"><span class="field_required">*</span> หมายเลขโทรศัพท์ที่ใช้งานในปัจจุบันเท่านั้น</div>
           </div>
 
