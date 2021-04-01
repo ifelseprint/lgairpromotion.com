@@ -71,7 +71,7 @@ foreach($dataExcel as $data){
     $sheet->setCellValue("P".$row_sheet, $data->SELECT_4);
     $sheet->setCellValue("Q".$row_sheet, $data->SELECT_1);
     $sheet->setCellValue("R".$row_sheet, $data->QUESTION_1);
-    $sheet->setCellValue("S".$row_sheet, (!empty($Register->shop->shop_name) ? $data->shop->shop_name : ''));
+    $sheet->setCellValue("S".$row_sheet, (!empty($data->shop->shop_name) ? $data->shop->shop_name : ''));
     $sheet->setCellValue("T".$row_sheet, date('d/m/Y', strtotime($data->QUESTION_2)));
     $sheet->setCellValue("U".$row_sheet, $FILE_1);
     $sheet->setCellValue("V".$row_sheet, $data->QUESTION_4);
