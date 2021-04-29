@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC] 
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?lgairpromotion.com*$ [NC] 
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?lgairpromotion.*$ [NC] 
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?lgairpromotion.com*$ [NC] 
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?lgairpromotion.*$ [NC] 
+RewriteRule \.(jpg|pdf|jpeg|png)$ - [F]
